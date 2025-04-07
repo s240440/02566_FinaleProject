@@ -4,11 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/74.0.2/Example Scenes/BodyPoseDetectionExamples.unity"
+    guid: 06a339ff5513d7f49a91ab90cbe194d4
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 601cf18c718ea28269269c9f4cf30382, type: 2}
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 01c469f288e7d826ba68eb732ef160a8, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 373f03d7bd2eb3ecc921c86865b0570f, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c401d626f615a474b9255c9c9895e6a8, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: df5cd24049b7048eeb17bbfe00c13b0b, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 51c6c685c4f8d4a5c9b0de6f116bf4a8, type: 2}
   m_UseUCBPForAssetBundles: 0
