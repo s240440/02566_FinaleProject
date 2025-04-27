@@ -13,6 +13,8 @@ public class MonsterSpawnManager : MonoBehaviour
     private List<SpawnPoint> spawnPoints = new List<SpawnPoint>();
     private float timeSinceLastSpawn = 0f;
     
+        private bool spawnMonsters = true;
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -51,7 +53,7 @@ public class MonsterSpawnManager : MonoBehaviour
         SpawnPoint chosenSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
         
         // Spawn the monster
-        if (monsterPrefab != null)
+        if (monsterPrefab != null && spawnMonsters)
         {
             Instantiate(monsterPrefab, chosenSpawnPoint.transform.position, 
                         chosenSpawnPoint.transform.rotation);
@@ -62,5 +64,12 @@ public class MonsterSpawnManager : MonoBehaviour
         {
             Debug.LogError("Monster prefab is not assigned");
         }
+    }
+    
+        public void StopSpawning()
+    {
+        spawnMonsters = false;
+        Debug.Log("Monster spawning stopped");
+
     }
 }
