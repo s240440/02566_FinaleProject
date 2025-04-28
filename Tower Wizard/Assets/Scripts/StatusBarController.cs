@@ -6,7 +6,7 @@ using System.Collections;
 public class StatusBarController : MonoBehaviour
 {
     [Header("Health")]
-    public int health = 3;
+    public int health = 4;
     public Slider healthSlider;
     [Header("Move Bar")]
     public int movebar = 0;
@@ -18,19 +18,52 @@ public class StatusBarController : MonoBehaviour
 
     [Header("Projectile")]
     public GameObject projectilePrefab1;
+    public GameObject projectilePrefab2;
     public Transform projectileSpawnPoint;
     public float projectileSpeed = 8f;
+
+    // Shield 1 is the first one that should disappear
+    public GameObject Shield1;
+    public GameObject Shield2;
+    public GameObject Shield3;
+    public TextMeshProUGUI debugtext;
+
+    // Audio
+    private AudioClip damageClip;
+    private AudioSource audioSource;
 
 
     public void SubtractHealth(int amount)
     {
+        debugtext.text = "Subtracting health";
         health -= amount;
-        Debug.Log("Health subtracted to: " + health);
-        if (health <= 0)
+        healthSlider.value = health;
+        PlayDamageSound();
+
+        if (health == 3)
+        {
+            Shield1.SetActive(false);
+        }
+        else if (health == 2)
+        {
+            Shield2.SetActive(false);
+        }
+        else if (health == 1)
+        {
+            Shield3.SetActive(false);
+        }
+        else if (health <= 0)
         {
             Debug.Log("Game Over");
             // Add game over logic here
         }
+
+    }
+
+    void PlayDamageSound()
+    {
+        if (damageClip != null && audioSource != null)
+            audioSource.PlayOneShot(damageClip);
     }
 
     public void RegisterMove(string movename)
@@ -44,12 +77,19 @@ public class StatusBarController : MonoBehaviour
         else if (lastMove == "dab" && movename == "right_straight")
         {
             moveSlider.value = 2;
-            LaunchProjectile();
+            LaunchProjectile(projectilePrefab1);
         }
         else if (lastMove == "arms_up" && movename == "arms_front")
         {
             moveSlider.value = 2;
+            LaunchProjectile(projectilePrefab2);
         }
+
+        // // For debug
+        // moveSlider.value = 2;
+        // LaunchProjectile();
+        // // end
+
 
         lastMove = movename;
 
@@ -68,23 +108,36 @@ public class StatusBarController : MonoBehaviour
         moveSlider.value = 0;
     }
 
-    private void LaunchProjectile()
+    private void LaunchProjectile(GameObject projectile)
     {
         Debug.Log("Launch projectile function started");
-        if (projectilePrefab1 == null || projectileSpawnPoint == null) return;
+        if (projectile == null || projectileSpawnPoint == null) return;
         Debug.Log("Initiating projectile");
-        GameObject go = Instantiate(projectilePrefab1, projectileSpawnPoint.position, projectileSpawnPoint.rotation);  // Give it speed 
+        GameObject go = Instantiate(projectile, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
         Debug.Log(" projectile initiated");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        healthSlider.maxValue = 3;
-        healthSlider.value = 3;
+        healthSlider.maxValue = 4;
+        healthSlider.value = 4;
         moveSlider.maxValue = 2;
         moveSlider.value = 0;
         moveText.text = "Move: " + "None";
+
+        // Load your damage sound from Resources folder:
+        damageClip = Resources.Load<AudioClip>("Sounds/DM-CGS-29");
+
+        if (damageClip == null)
+        {
+            Debug.LogError("Failed to load audio from Resources/Sounds/DM-CGS-29.wav. Check the path.");
+        }
+
+        // Add an AudioSource component dynamically or manually
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
