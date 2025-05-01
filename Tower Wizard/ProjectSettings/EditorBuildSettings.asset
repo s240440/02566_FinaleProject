@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MovementBodyTrackingForFitness.unity
     guid: 490f9aba8f0ba4563af56d7cd822baf0
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/SceneGiorgi.unity
     guid: c3e5864742ee3487e9c2ea0d19729913
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
