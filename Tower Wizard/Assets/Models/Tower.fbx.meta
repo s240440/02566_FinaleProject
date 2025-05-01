@@ -3,32 +3,7 @@ guid: 6b7db30d8aef53f408fcd0a5e993915a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Color
-    second: {fileID: 2100000, guid: d609663eb24641d46ac84a27152cb970, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Flame
-    second: {fileID: 2100000, guid: f6b580efa5cee8649834f640bc33bfbb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Handle
-    second: {fileID: 2100000, guid: 739dbb7f67bd7584c88a2cf980198ca2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MagicCircle
-    second: {fileID: 2100000, guid: e510e9a719714a1418100a987665f30c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Shield
-    second: {fileID: 2100000, guid: 733f00316f93d53409f532882021f029, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
