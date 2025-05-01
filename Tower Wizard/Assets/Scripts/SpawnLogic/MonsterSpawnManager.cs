@@ -7,13 +7,13 @@ public class MonsterSpawnManager : MonoBehaviour
     public static MonsterSpawnManager Instance { get; private set; }
     
     [Header("Spawn Settings")]
-    public GameObject monsterPrefab;
+    public GameObject[] monsterPrefabs;
     public float spawnInterval = 30f;
     
     private List<SpawnPoint> spawnPoints = new List<SpawnPoint>();
     private float timeSinceLastSpawn = 0f;
     
-        private bool spawnMonsters = true;
+    private bool spawnMonsters = true;
     
     private void Awake()
     {
@@ -34,6 +34,11 @@ public class MonsterSpawnManager : MonoBehaviour
         {
             Debug.LogError("No spawn points found in the scene");
         }
+        
+        if (monsterPrefabs == null || monsterPrefabs.Length == 0)
+        {
+            Debug.LogError("Monster prefab(s) not assigned");
+        }
     }
     
     private void Update()
@@ -51,6 +56,7 @@ public class MonsterSpawnManager : MonoBehaviour
     private void SpawnMonster()
     {
         SpawnPoint chosenSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+        GameObject monsterPrefab = GetRandomMonsterPrefab();
         
         // Spawn the monster
         if (monsterPrefab != null && spawnMonsters)
@@ -66,7 +72,14 @@ public class MonsterSpawnManager : MonoBehaviour
         }
     }
     
-        public void StopSpawning()
+    private GameObject GetRandomMonsterPrefab()
+    {
+        Debug.Log("Monster spawned at {chosenSpawnPoint.name}");
+        int randomIndex = Random.Range(0, monsterPrefabs.Length);
+        return monsterPrefabs[randomIndex];
+    }
+    
+    public void StopSpawning()
     {
         spawnMonsters = false;
         Debug.Log("Monster spawning stopped");
