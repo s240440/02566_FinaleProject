@@ -74,7 +74,6 @@ public class MonsterSpawnManager : MonoBehaviour
     
     private GameObject GetRandomMonsterPrefab()
     {
-        Debug.Log("Monster spawned at {chosenSpawnPoint.name}");
         int randomIndex = Random.Range(0, monsterPrefabs.Length);
         return monsterPrefabs[randomIndex];
     }
