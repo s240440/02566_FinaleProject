@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     [Header("Game Settings")]
     [SerializeField] private float gameDuration;
     
+    [Header("Skybox Settings")]
+    [SerializeField] private Material initialSkybox;
+    [SerializeField] private Material endGameSkybox;
+    
     [Header("Events")]
     public UnityEvent OnGameEnd;
     
@@ -30,6 +34,10 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
+    	if (initialSkybox != null)
+        {
+            RenderSettings.skybox = initialSkybox;
+        }
         StartGame();
     }
     
@@ -56,7 +64,19 @@ public class GameManager : MonoBehaviour
     {
         isGameRunning = false;
         Debug.Log("GAME ENDED - Time expired!");
+        ChangeSkyboxToEndGame();
         OnGameEnd?.Invoke();
+    }
+    
+    private void ChangeSkyboxToEndGame()
+    {
+        if (endGameSkybox != null)
+        {
+            RenderSettings.skybox = endGameSkybox;
+            DynamicGI.UpdateEnvironment();
+            
+            Debug.Log("Changed to endgame skybox");
+        }
     }
     
     public float GetRemainingTime()
