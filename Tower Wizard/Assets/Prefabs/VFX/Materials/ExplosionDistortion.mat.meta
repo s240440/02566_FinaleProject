@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 81453649efd584e63bd137ed66a5ecf6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127325
+  packageName: Particle Pack
+  packageVersion: 3.1
+  assetPath: Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire & Explosion
+    Effects/Materials/ExplosionDistortion.mat
+  uploadId: 691001

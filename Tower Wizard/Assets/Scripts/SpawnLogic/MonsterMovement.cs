@@ -5,21 +5,22 @@ public class MonsterMovement : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float stoppingDistance = 2.5f;
-    
+
     private Transform playerTransform;
-    private bool isMoving = true;
     private StatusBarController statusBarController;
-    private bool targetReached = false;
-    
-    private Renderer[] renderers;
-    private Collider[] colliders;
-    
-    
+    private MonsterHealth monsterHealth;
+
+
     private void Start()
     {
         GameObject statusBarObject = GameObject.FindGameObjectWithTag("GameController");
         statusBarController = statusBarObject.GetComponent<StatusBarController>();
-        
+        monsterHealth = GetComponent<MonsterHealth>();
+        if (monsterHealth == null)
+        {
+            Debug.LogError("MonsterHealth component not found on this GameObject.");
+        }
+
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
@@ -31,18 +32,18 @@ public class MonsterMovement : MonoBehaviour
             enabled = false;
         }
     }
-    
+
     private void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
-        
+
         if (distanceToPlayer <= stoppingDistance)
         {
             if (statusBarController != null)
             {
                 statusBarController.SubtractHealth(1);
             }
-            Destroy(gameObject);
+            monsterHealth.DamageMonster(999);
         }
         else
         {
@@ -52,7 +53,7 @@ public class MonsterMovement : MonoBehaviour
                 playerTransform.position,
                 moveSpeed * Time.deltaTime
             );
-            
+
             // Make monster face player
             Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
             directionToPlayer.y = 0;

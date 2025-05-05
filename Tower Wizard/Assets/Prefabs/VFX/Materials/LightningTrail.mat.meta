@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5a2aa8eb1d9fa49db91550265a9e6fed
+timeCreated: 1472052335
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127325
+  packageName: Particle Pack
+  packageVersion: 3.1
+  assetPath: Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire & Explosion
+    Effects/Materials/LightningTrail.mat
+  uploadId: 691001

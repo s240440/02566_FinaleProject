@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0bbe34d4b6ee14bd69a9637501140691
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127325
+  packageName: Particle Pack
+  packageVersion: 3.1
+  assetPath: Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire & Explosion
+    Effects/Materials/EnergyExplosion.mat
+  uploadId: 691001

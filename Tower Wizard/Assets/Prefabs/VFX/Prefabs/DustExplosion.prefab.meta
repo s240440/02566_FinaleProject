@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 557a51a6914a64ae8b9944bdf201cc18
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127325
+  packageName: Particle Pack
+  packageVersion: 3.1
+  assetPath: Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire & Explosion
+    Effects/Prefabs/DustExplosion.prefab
+  uploadId: 691001

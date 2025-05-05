@@ -64,6 +64,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c4665861169d0f4d9d4107c80f3516f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2604693582177940322}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c4665861169d0f4d9d4107c80f3516f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6217678785806551725}
   m_SourcePrefab: {fileID: 100100000, guid: 8c4665861169d0f4d9d4107c80f3516f, type: 3}
 --- !u!1 &5318642453283517673 stripped
 GameObject:
@@ -106,3 +109,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6217678785806551725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5318642453283517673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02d6d858b67e4264b15e80a39496a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FireballDamage: 1
+  Spell2Damage: 1
+  StartHealth: 2
