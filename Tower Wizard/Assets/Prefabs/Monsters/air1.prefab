@@ -67,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b0573deb92ac7834b04d14e118dc947, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2383394178946312703}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b0573deb92ac7834b04d14e118dc947, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5852713122650894702}
   m_SourcePrefab: {fileID: 100100000, guid: 5b0573deb92ac7834b04d14e118dc947, type: 3}
 --- !u!1 &5179520447301467989 stripped
 GameObject:
@@ -124,3 +127,24 @@ MonoBehaviour:
   FireballDamage: 2
   Spell2Damage: 1
   StartHealth: 2
+--- !u!65 &5852713122650894702
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179520447301467989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.4, y: 3.328795, z: 2.4498608}
+  m_Center: {x: 0, y: 2.2642765, z: 0.3796662}

@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - QDSUIBackplateGradient
+  - QDSUIToggleButton
+  - QDSUISection
+  - QDSUIIcon
+  - QDSUIToggleSwitch
+  - QDSUIToggleCheckboxRadio
+  - QDSUISecondaryButton
+  - QDSUITooltip
+  - QDSUIAccentColor
+  - QDSUISharedThemeColor
+  - Fireball
+  - Spell2
   layers:
   - Default
   - TransparentFX
