@@ -53,7 +53,8 @@ PrefabInstance:
       value: EARTH1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: fcc9973214a8ccefc8b6cd0f65972126, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fcc9973214a8ccefc8b6cd0f65972126, type: 3}
