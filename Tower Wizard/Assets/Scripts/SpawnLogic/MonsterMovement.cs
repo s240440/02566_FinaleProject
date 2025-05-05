@@ -14,11 +14,6 @@ public class MonsterMovement : MonoBehaviour
     private Renderer[] renderers;
     private Collider[] colliders;
     
-    // private void Awake()
-    // {
-    //     renderers = GetComponentsInChildren<Renderer>();
-    //     colliders = GetComponentsInChildren<Collider>();
-    // }
     
     private void Start()
     {
@@ -39,38 +34,15 @@ public class MonsterMovement : MonoBehaviour
     
     private void Update()
     {
-        if (targetReached || !isMoving || playerTransform == null)
-            return;
-            
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
         
         if (distanceToPlayer <= stoppingDistance)
         {
-            targetReached = true;
-            
-            // Disable visuals
-            foreach (Renderer rend in renderers)
-            {
-                if (rend) rend.enabled = false;
-            }
-            
-            // Disable colliders
-            foreach (Collider col in colliders)
-            {
-                if (col) col.enabled = false;
-            }
-            
             if (statusBarController != null)
             {
                 statusBarController.SubtractHealth(1);
             }
-            
-            Destroy(gameObject, 0.1f);
-            
-            // Disable the script
-            enabled = false;
-            
-            isMoving = false;
+            Destroy(gameObject);
         }
         else
         {

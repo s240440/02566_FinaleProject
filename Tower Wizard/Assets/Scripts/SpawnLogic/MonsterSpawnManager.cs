@@ -8,7 +8,7 @@ public class MonsterSpawnManager : MonoBehaviour
     
     [Header("Spawn Settings")]
     public GameObject[] monsterPrefabs;
-    public float spawnInterval = 30f;
+    public float spawnInterval = 3f;
     
     private List<SpawnPoint> spawnPoints = new List<SpawnPoint>();
     private float timeSinceLastSpawn = 0f;
@@ -67,8 +67,10 @@ public class MonsterSpawnManager : MonoBehaviour
             Debug.Log($"Monster spawned at {chosenSpawnPoint.name}");
         }
         else
-        {
-            Debug.LogError("Monster prefab is not assigned");
+        {   
+            Debug.Log($"Monster prefab is null or spawnMonsters is false");
+            // Misleading error, that spams console once spawnmonsters is false
+            // Debug.LogError("Monster prefab is not assigned");
         }
     }
     
