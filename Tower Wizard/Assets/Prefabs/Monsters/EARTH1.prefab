@@ -122,5 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireballDamage: 1
-  Spell2Damage: 1
+  Spell2Damage: 2
   StartHealth: 2

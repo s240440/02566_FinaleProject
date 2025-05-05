@@ -121,8 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02d6d858b67e4264b15e80a39496a57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollectEffect: {fileID: 0}
-  FireballDamage: 1
+  FireballDamage: 2
   Spell2Damage: 1
   StartHealth: 2
-  CurrentHealth: 0
