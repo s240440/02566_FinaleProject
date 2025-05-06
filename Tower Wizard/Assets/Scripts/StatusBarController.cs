@@ -127,11 +127,11 @@ public class StatusBarController : MonoBehaviour
         moveText.text = "Move: " + "None";
 
         // Load your damage sound from Resources folder:
-        damageClip = Resources.Load<AudioClip>("Sounds/DM-CGS-29");
+        damageClip = Resources.Load<AudioClip>("Sounds/ShieldBreak");
 
         if (damageClip == null)
         {
-            Debug.LogError("Failed to load audio from Resources/Sounds/DM-CGS-29.wav. Check the path.");
+            Debug.LogError("Failed to load audio from Resources/Sounds/ShieldBreak. Check the path.");
         }
 
         // Add an AudioSource component dynamically or manually

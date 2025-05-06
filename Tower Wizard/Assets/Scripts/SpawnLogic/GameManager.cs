@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     public UnityEvent OnGameEnd;
     public GameObject Rewardplushy;
+    public Music MusicController;
     
     private float elapsedTime = 0f;
     private bool isGameRunning = false;
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
             
             if (elapsedTime >= gameDuration)
             {
+                // Endgame win
                 EndGame();
             }
         }
@@ -67,6 +69,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("GAME ENDED - Time expired!");
         ChangeSkyboxToEndGame();
         OnGameEnd?.Invoke();
+        MusicController.PlayWinSound();
     }
     
     private void ChangeSkyboxToEndGame()
