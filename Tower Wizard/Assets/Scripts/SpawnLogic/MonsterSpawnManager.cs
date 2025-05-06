@@ -9,6 +9,7 @@ public class MonsterSpawnManager : MonoBehaviour
     [Header("Spawn Settings")]
     public GameObject[] monsterPrefabs;
     public float spawnInterval = 3f;
+    public float brazierFireDuration = 10f;
     
     private List<SpawnPoint> spawnPoints = new List<SpawnPoint>();
     private float timeSinceLastSpawn = 0f;
@@ -64,6 +65,7 @@ public class MonsterSpawnManager : MonoBehaviour
             Instantiate(monsterPrefab, chosenSpawnPoint.transform.position, 
                         chosenSpawnPoint.transform.rotation);
             
+            chosenSpawnPoint.ActivateBrazier(brazierFireDuration);
             Debug.Log($"Monster spawned at {chosenSpawnPoint.name}");
         }
         else
