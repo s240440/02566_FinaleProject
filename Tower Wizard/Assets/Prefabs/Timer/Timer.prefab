@@ -162,7 +162,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &290915231460157097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +201,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeTimerFiller: {fileID: 7205737127825306523}
-  timerDuration: 60
 --- !u!1 &7964022919155571802
 GameObject:
   m_ObjectHideFlags: 0
