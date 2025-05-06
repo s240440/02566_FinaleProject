@@ -18,6 +18,18 @@ public class Fireball : MonoBehaviour
     // Optional: damage something if we hit it 
     private void OnTriggerEnter(Collider other)
     { // Damage logic here, then destroy 
-        Destroy(gameObject);
+        if (!other.CompareTag("Tower"))
+        {
+            // Destroy the collectible
+            Destroy(gameObject);
+        }
+        // // Turn the gravity on:
+        // Rigidbody rb = GetComponent<Rigidbody>();
+        // if (rb != null)
+        // {
+        //     rb.useGravity = true;
+        // }
+
+
     }
 }

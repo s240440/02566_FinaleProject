@@ -43,7 +43,6 @@ public class MonsterHealth : MonoBehaviour
         else if (other.CompareTag("Spell2"))
         {
             // Destroy the collectible
-            CurrentHealth -= Spell2Damage;
             DamageMonster(Spell2Damage);
             Destroy(other.gameObject);
         }

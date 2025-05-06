@@ -16,6 +16,7 @@ TagManager:
   - QDSUISharedThemeColor
   - Fireball
   - Spell2
+  - Tower
   layers:
   - Default
   - TransparentFX

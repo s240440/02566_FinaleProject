@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     
     [Header("Events")]
     public UnityEvent OnGameEnd;
+    public GameObject Rewardplushy;
     
     private float elapsedTime = 0f;
     private bool isGameRunning = false;
@@ -74,7 +75,7 @@ public class GameManager : MonoBehaviour
         {
             RenderSettings.skybox = endGameSkybox;
             DynamicGI.UpdateEnvironment();
-            
+            Rewardplushy.SetActive(true);
             Debug.Log("Changed to endgame skybox");
         }
     }
