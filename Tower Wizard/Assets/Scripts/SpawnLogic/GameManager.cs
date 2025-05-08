@@ -121,11 +121,11 @@ public class GameManager : MonoBehaviour
         
         OnGameEnd?.Invoke();
         
-        if (!isRestartScheduled)
-        {
-            isRestartScheduled = true;
-            StartCoroutine(RestartGameAfterDelay());
-        }
+        // if (!isRestartScheduled)
+        // {
+            // isRestartScheduled = true;
+            // StartCoroutine(RestartGameAfterDelay());
+        // }
     }
     
     private void ChangeSkybox(Material skybox)
