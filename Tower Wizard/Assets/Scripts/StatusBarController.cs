@@ -5,6 +5,9 @@ using System.Collections;
 
 public class StatusBarController : MonoBehaviour
 {
+
+    public static event System.Action OnPlayerDeath;
+        
     [Header("Health")]
     public int health = 4;
     public Slider healthSlider;
@@ -54,8 +57,8 @@ public class StatusBarController : MonoBehaviour
         }
         else if (health <= 0)
         {
-            Debug.Log("Game Over");
-            // Add game over logic here
+            // Debug.Log("Game Over");
+            OnPlayerDeath?.Invoke();
         }
 
     }
