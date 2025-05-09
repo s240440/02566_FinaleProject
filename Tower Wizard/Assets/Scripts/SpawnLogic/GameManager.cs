@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("GAME ENDED - Time expired");
                 MusicController.PlayWinSound();
                 ChangeSkybox(gameWinSkybox);
+                Rewardplushy.SetActive(true);
                 break;
                 
             case GameEndReason.PlayerDeath:
